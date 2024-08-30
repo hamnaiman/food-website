@@ -1,0 +1,428 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-image: url(background.avif);
+    background-repeat: no-repeat;
+    height: auto;
+    width: 100%;
+    background-size: cover;
+}
+
+.logo {
+    height: 70px;
+    width: 80px;
+}
+
+.navbar {
+    background-color: rgb(223, 241, 247);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+}
+.navbar-brand:hover {
+    color: #FF69B4;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+  }
+  
+.nav-link:hover {
+    color: #007bff;
+    background-color: #f7f7f7;
+    border-bottom: 2px solid #007bff;
+    transition: all 0.2s ease;
+}
+
+.nav-link {
+    color: black;
+    font-weight: 700;
+}
+
+.btn1 {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn1:hover {
+    background-color: #3770ad;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.card {
+  display: flex;
+  background :#7ba4cf;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  opacity: 0; 
+  transform: translateY(20px); 
+  animation: fadeInUp 1s forwards; 
+  max-width: 1200px;
+  width: 100%;
+  gap: 20px; 
+}
+
+.text-section {
+  flex: 1;
+  text-align: left;
+  color: #333333;
+}
+
+.text-section h1 {
+  font-size: 2.2em;
+  color: #3770ad; 
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+.text-section p {
+  margin: 15px 0;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.text-section p:first-of-type {
+  font-style: italic;
+  color: #666666;
+}
+
+.text-section p:last-of-type {
+  color: #555555;
+}
+.image-section {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  max-width:auto;
+}
+
+.image-section img {
+  width: 100%;
+  height: 300px;
+  display: block;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.image-section img:hover {
+  transform: scale(1.05);
+}
+
+@keyframes fadeInUp {
+  to {
+      opacity: 1;
+      transform: translateY(0); 
+  }
+}
+.about-us {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  max-width: 800px;
+  width: 100%;
+  opacity: 0; /* Start hidden */
+  transform: translateY(20px); /* Start with a small vertical offset */
+  animation: fadeInUp 1s 0.5s forwards; /* Apply fadeInUp animation with delay */
+  text-align: center;
+  margin: 0 auto; /* Centering horizontally */
+}
+.about-us h2 {
+  font-size: 2em;
+  color: #3770ad; 
+}
+
+.about-us p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #555555;
+}
+
+/* Keyframes for fadeInUp animation */
+@keyframes fadeInUp {
+  to {
+      opacity: 1;
+      transform: translateY(0); /* End with no vertical offset */
+  }
+}
+@media (max-width: 768px) {
+  .card {
+      flex-direction: column; /* Stack text and image vertically on small screens */
+  }
+
+  .image-section {
+      max-width: 100%; /* Ensure image section fits within its container */
+  }
+
+  .text-section {
+      padding: 20px; /* Reduce padding for smaller screens */
+  }
+
+  .about-us {
+      padding: 20px; /* Reduce padding for smaller screens */
+      max-width: 100%; /* Ensure it fits within its container */
+  }
+}
+
+/* Keyframes for fadeInUp animation */
+@keyframes fadeInUp {
+  to {
+      opacity: 1;
+      transform: translateY(0); /* End with no vertical offset */
+  }
+}
+.gallery {
+  background:lightblue;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+  opacity: 0; /* Start hidden */
+  transform: translateY(20px); /* Start with a small vertical offset */
+  animation: fadeInUp 1s 1s forwards; /* Apply fadeInUp animation with delay */
+}
+
+.gallery h2 {
+  font-size: 2em;
+  color: rgb(22, 22, 56); /* Orange color for consistency */
+  margin-bottom: 20px;
+}
+
+/* Grid layout for gallery items */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Space between items */
+}
+
+/* Food card styling */
+.food-card {
+  background: #d7ecf5;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease; /* Smooth zoom effect on hover */
+}
+
+.food-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.food-card-content {
+  padding: 15px;
+}
+
+.food-card h3 {
+  font-size: 1.5em;
+  color: #333333;
+  margin: 10px 0;
+}
+
+.food-card .description {
+  font-size: 1em;
+  color: #666666;
+  margin: 10px 0;
+}
+
+
+.food-card .price {
+  font-size: 1.2em;
+  color: #e67e22; /* Price color */
+  margin: 10px 0;
+}
+
+.review-stars {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.star {font-size: 1.2em;
+  color: #f1c40f; /* Gold color for stars */
+}
+
+/* Hover effect for food cards */
+.food-card:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */}
+
+.content {
+    padding: 2rem;
+}
+
+nav {
+    background-color: #01579b; /* Darker blue for nav */
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.menu {
+    margin-top: 1rem;
+    background-color: #ffffff; /* White background for the menu */
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 1rem; /* Gap between items */
+}
+
+.food-item {
+    background-color: #ffffff; /* White background for items */
+    border: 1px solid #b3e5fc; /* Light blue border */
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.food-item h2 {
+    margin-top: 0;
+}
+
+.order-button {
+    background-color: #0288d1; /* Dark blue button */
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.order-button:hover {
+    background-color: #01579b; /* Darker blue on hover */
+}
+
+.order {
+    padding: 2rem;
+    background-color: #eef7fc;/* White background for the order section */
+    border-top: 1px solid #b3e5fc; /* Light blue border */
+    text-align: center;
+}
+
+.order h2 {
+    margin-top: 0;
+    color: #007bff;
+}
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+  
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0 0.2rem;
+}
+
+input, select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #0288d1; /* Dark blue button */
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #01579b; /* Darker blue on hover */
+}
+.reviews {
+  padding: 2rem;
+  background-color: #ffffff; /* White background for reviews section */
+  border-top: 1px solid #b3e5fc; /* Light blue border */
+  margin-top: 2rem; /* Space between sections */
+}
+
+.reviews h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.review {
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0;
+}
+
+.review:last-child {
+  border-bottom: none; /* Remove border for the last review */
+}
+
+.review h3 {
+  margin: 0 0 0.5rem 0;
+}
+
+.review p {
+  margin: 0;
+}
+.footer {
+  background-color: #01579b; /* Darker blue for footer */
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 1rem;
+}
